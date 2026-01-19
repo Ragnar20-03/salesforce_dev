@@ -3,7 +3,7 @@ public with sharing class AccountRelatedContacts {
 
     }
 
-    public static  void countRelatedContacts (Account accountId) 
+    public static  void countRelatedContacts (ID accountId) 
     {
         list < Contact > contacts = new list < Contact > () ; 
         contacts = [select name from contact where AccountId = :accountId ] ;
