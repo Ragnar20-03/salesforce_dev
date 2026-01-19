@@ -25,5 +25,6 @@ jobs:
         run: |
           sf project deploy start \
             --target-org roshansOrg \
-            --source-dir force-app/main/default/classes,force-app/main/default/triggers \
+            --source-dir force-app \
             --verbose
+
