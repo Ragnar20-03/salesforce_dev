@@ -15,4 +15,11 @@ public class AccountHandler {
     }
         insert contacts ;
     }
+
+    public static Integer relatedOpportunities (Id accId) 
+    {
+        Integer res ; 
+        res = [select count () from Opportunity where AccountId = :accId];
+        return res ; 
+    }
 }
