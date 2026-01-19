@@ -6,6 +6,6 @@ public with sharing class AccountRelatedContacts {
     public static  void countRelatedContacts (Id accountId) 
     {
         list < Contact > contacts = new list < Contact > () ; 
-        contacts = [select name from contact where AccountId=accountId ] ;
+        contacts = [select name from contact limit 200 ] ;
     }
 }
