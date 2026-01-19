@@ -22,4 +22,8 @@ jobs:
           sf org login sfdx-url --sfdx-url-file auth.txt --alias roshansOrg
 
       - name: Deploy to Salesforce
-        run: sf project deploy start --target-org roshansOrg --verbose
+        run: |
+          sf project deploy start \
+            --target-org roshansOrg \
+            --source-dir force-app/main/default/classes,force-app/main/default/triggers \
+            --verbose
