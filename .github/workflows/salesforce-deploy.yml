@@ -19,7 +19,7 @@ jobs:
       - name: Authenticate to Salesforce
         run: |
           echo "${{ secrets.SF_AUTH_URL }}" > auth.txt
-          sf org login sfdx-url --sfdx-url-file auth.txt --target-org roshansOrg
+          sf org login sfdx-url --sfdx-url-file auth.txt --alias roshansOrg
 
       - name: Deploy to Salesforce
-        run: sf project deploy start
+        run: sf project deploy start --target-org roshansOrg --verbose
