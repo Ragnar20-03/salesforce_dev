@@ -1,7 +1,3 @@
-trigger OpportunityTrigger on Opportunity (before insert , before update) {
-    List < Opportunity > opprtunities = new list < Opportunity > () ; 
-
- 
-            OpportunityHandler.changeStageName( trigger.new);
-
+trigger OpportunityTrigger on Opportunity (before insert) {
+    OpportunityHandler.checkOpportunity(Trigger.new);
 }
