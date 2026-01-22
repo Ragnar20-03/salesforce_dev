@@ -5,6 +5,6 @@ public with sharing class LeadConverter {
 
     public  static void  conveftLead (Id leadId) 
     {
-
+        
     }
 }
